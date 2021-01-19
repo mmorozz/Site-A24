@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    src: url('fonts/bertholdakzidenzgroteskbeextended.eot');
+    src: url('fonts/bertholdakzidenzgroteskbeextended.eot') format('embedded-opentype'),
+         url('fonts/bertholdakzidenzgroteskbeextended.woff2') format('woff2'),
+         url('fonts/bertholdakzidenzgroteskbeextended.woff') format('woff'),
+         url('fonts/bertholdakzidenzgroteskbeextended.ttf') format('truetype'),
+         url('fonts/bertholdakzidenzgroteskbeextended.svg#bertholdakzidenzgroteskbeextended') format('svg');
+}

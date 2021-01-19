@@ -1,0 +1,806 @@
+* {
+    margin: 0;
+    padding: 0 ;
+}
+
+@font-face {
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    src: url('fonts/bertholdakzidenzgroteskbeextended.eot');
+    src: url('fonts/bertholdakzidenzgroteskbeextended.eot') format('embedded-opentype'),
+        url('fonts/bertholdakzidenzgroteskbeextended.woff2') format('woff2'),
+        url('fonts/bertholdakzidenzgroteskbeextended.woff') format('woff'),
+        url('fonts/bertholdakzidenzgroteskbeextended.ttf') format('truetype'),
+        url('fonts/bertholdakzidenzgroteskbeextended.svg#bertholdakzidenzgroteskbeextended') format('svg');
+}
+
+@font-face {
+    font-family: 'akzidenzgrotesk';
+    src: url('fonts/akzidenzgrotesk.eot');
+    src: url('fonts/akzidenzgrotesk.eot') format('embedded-opentype'),
+        url('fonts/akzidenzgrotesk.woff2') format('woff2'),
+        url('fonts/akzidenzgrotesk.woff') format('woff'),
+        url('fonts/akzidenzgrotesk.ttf') format('truetype'),
+        url('fonts/akzidenzgrotesk.svg#akzidenzgrotesk') format('svg');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1920px) {
+
+header {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+header img {
+    height: 30px;
+    margin-left: 90px;
+    transition: 0.5s ease;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    font-size: 21px;
+    padding: 17px 10px;
+    margin-right: 90px;
+    transition: 0.5s ease;
+}
+
+.links a:hover {
+    color: #505050;
+    transition: 0.5s;
+}
+
+.slides {
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.slides img {
+    width: 100%;
+}
+
+.indicador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.indicador p {
+    margin-right: 14px;
+}
+
+.nome {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:-60px;
+    padding: 10px 0 10px 0;
+}
+
+.nome-do-filme {
+    margin-right: 90px;
+}
+
+#films {
+    padding-top: 70px;
+}
+
+.filmes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 200px 90px 0 90px;
+}
+
+.titulo {
+    font-size: 50px;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+}
+
+.subtitulo {
+    font-size: 30px;
+}
+
+.elemento {
+    font-size: 50px;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+}
+
+.fotos-filmes {
+    margin: 150px 0px 150px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 2;
+}
+
+.lancamentos {
+    height: 478px;
+    width: auto;
+    cursor: grab;
+    padding-bottom: 20px;
+    margin: 0px 48px 0px 48px;
+}
+
+.clicavel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clicavel-pequeno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 303px;
+    height: 385px;
+}
+
+.fundo {
+    opacity: 0%;
+    margin-top: -10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 323px;
+    height: 478px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.fundo p {
+    padding: 15px 50px 15px 50px;
+    font-family: 'akzidenzgrotesk';
+    font-size: 12pt;
+}
+
+.extended {
+    font-family: 'bertholdakzidenzgroteskbeextended';
+}
+
+.clicavel:hover .fundo {
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.fotos-filmes-quatro {
+    margin: 150px 0px 150px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 2;
+}
+
+.old {
+    height: 370px;
+    width: auto;
+    cursor: grab;
+    padding-bottom: 20px;
+}
+
+.fundo-pequeno {
+    opacity: 0%;
+    margin-top: -10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 250px;
+    height: 370px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.fundo-pequeno p {
+    padding: 10px 50px 10px 50px;
+    font-family: 'akzidenzgrotesk'
+}
+
+.clicavel-pequeno:hover .fundo-pequeno {
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.tv-foto {
+    margin: 150px 90px 150px 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#tv {
+    padding-top: 70px;
+}
+
+.tv-foto img {
+    width: 550px;
+    transition: transform .5s ease;
+}
+
+.tv-texto .extended {
+    font-size: 20px;
+}
+
+.tv-texto p {
+    padding: 10px;
+}
+
+.tv-texto {
+    display: flex;
+    flex-direction: column;
+    padding-left: 120px;
+    font-family: 'akzidenzgrotesk';
+    font-size: 18px;
+    width: 450px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.tv-foto:hover img {
+    transform: scale(1.1);
+}
+
+.notes-geral {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 200px 90px 0 90px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.notes-content {
+    width: 550px;
+    font-family: 'akzidenzgrotesk';
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+.notes-content p , .notes-content iframe {
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+
+.notes-content a {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.notes-content a:hover {
+    text-decoration: underline;
+}
+
+.notes-content img {
+    width: 550px;
+}
+
+.notes-content .extended {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#notes {
+    padding-top: 70px;
+}
+
+.shop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0px 90px 0 90px;
+}
+
+.shop-geral {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 200px 90px 0 90px;
+}
+
+.shop-geral img {
+    height: 550px;
+}
+
+.info-shop {
+    font-family: 'akzidenzgrotesk';
+    font-size: 30px;
+    padding-right: 170px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#shop {
+    padding-top: 70px;
+}
+
+.rodape {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding-bottom: 70px;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    font-size: 20px;
+}
+
+.cima-meio {
+    padding-bottom: 60px;
+}
+
+.cima-meio a img {
+    width: 30px;
+    padding: 15px 15px 0px 0px;
+    height: auto;
+}
+
+.cima-meio a:hover img {
+    opacity: 50%;
+    transition: 0.3s;
+}
+
+.titulo-rodape a:hover {
+    text-decoration: underline;
+}
+
+.titulo-rodape {
+    margin: 140px 90px 20px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titulo-rodape a {
+    padding-top: 20px;
+}
+
+.titulo-rodape a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.caixa {
+    padding: 15px 17px 15px 17px;
+    border: solid 3px #fff;
+    background-color: #000;
+    color: #fff;
+    font-family: 'akzidenzgrotesk';
+    font-size: 15px;
+    width: 300px;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+}
+
+.botao {
+    padding: 15px 17px 15px 17px;
+    background-color: #fff;
+    border: solid 3px #fff;
+    color: #000;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    font-size: 15px;
+}
+}
+
+
+@media screen and (max-width: 900px) {
+
+header {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: unset;
+    padding: 10px 0px;
+    height: 40px;
+    width: 100%;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    font-size: 15px;
+    padding: 10px 10px;
+    margin-right: 20px;
+    transition: 0.5s ease;
+}
+
+.slides {
+    margin-top: -50px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.slides img {
+    width: 100%;
+}
+
+.indicador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.indicador p {
+    margin-right: 14px;
+}
+
+.nome {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -60px;
+    padding: 10px 0 10px 0;
+}
+
+.nome-do-filme {
+    margin-right: 90px;
+}
+
+#films {
+    padding-top: 70px;
+}
+
+.filmes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0px 90px 0 90px;
+}
+
+.titulo {
+    font-size: 25px;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+}
+
+.subtitulo {
+    font-size: 17px;
+}
+
+.elemento {
+    font-size: 25px;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+}
+
+.fotos-filmes {
+    margin: 150px 0px 150px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.lancamentos {
+    height: 350px;
+    width: auto;
+    cursor: grab;
+    padding-bottom: 20px;
+    margin: 0px 30px 0px 0px;
+}
+
+.clicavel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+.clicavel-pequeno {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 60px 90px 0 90px;
+}
+
+.fundo {
+    opacity: 100%;
+    margin-top: 0px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.0);
+    width: auto;
+    height: auto;
+    color: rgba(0, 0, 0, 1);
+}
+
+.fundo p {
+    padding: 15px 0px 15px 0px;
+    font-family: 'akzidenzgrotesk';
+    font-size: 12pt;
+}
+
+.extended {
+    font-family: 'bertholdakzidenzgroteskbeextended';
+}
+
+.fotos-filmes-quatro {
+    margin: 150px 0px 150px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 2;
+}
+
+.old {
+    height: 320px;
+    width: auto;
+    cursor: grab;
+    padding-bottom: 0px;
+}
+
+.fundo-pequeno {
+    font-size: 10pt;
+    opacity: 100%;
+    margin-top: 0px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.0);
+    width: auto;
+    height: auto;
+    color: rgba(0, 0, 0, 1);
+}
+
+.fundo-pequeno p {
+    padding: 5px 10px 5px 50px;
+    font-family: 'akzidenzgrotesk'
+}
+
+.tv-foto {
+    margin: 90px 90px 0px 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#tv {
+    padding-top: 70px;
+}
+
+.tv-foto img {
+    width: 470px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.tv-texto .extended {
+    font-size: 15px;
+}
+
+.tv-texto p {
+    padding: 10px 10px 10px 0px;
+}
+
+.tv-texto {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    font-family: 'akzidenzgrotesk';
+    font-size: 13px;
+    width: 450px;
+}
+
+.tv-foto:hover img {
+    transform: scale(1.0);
+}
+
+.notes-geral {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 200px 90px 0 90px;
+}
+
+.notes-content {
+    width: auto;
+    height: auto;
+    font-family: 'akzidenzgrotesk';
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+
+.notes-content p,
+.notes-content iframe {
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+
+.notes-content a {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.notes-content a:hover {
+    text-decoration: underline;
+}
+
+.notes-content img {
+    width: 400px;
+    height: auto;
+}
+
+.notes-content .extended {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#notes {
+    padding-top: 70px;
+}
+
+.shop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0px 90px 0 90px;
+    padding-top: 0px;
+}
+
+.shop-geral {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 80px 90px 0 90px;
+}
+
+.shop-geral img {
+    height: 470px;
+}
+
+.info-shop {
+    font-family: 'akzidenzgrotesk';
+    font-size: 15px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#shop {
+    padding-top: 0px;
+}
+
+.rodape {
+    background-color: #000;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding-bottom: 70px;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    font-size: 20px;
+}
+
+.cima-meio {
+    padding-bottom: 60px;
+}
+
+.cima-meio a img {
+    width: 30px;
+    padding: 15px 15px 0px 0px;
+    height: auto;
+}
+
+.cima-meio a:hover img {
+    opacity: 50%;
+    transition: 0.3s;
+}
+
+.titulo-rodape a:hover {
+    text-decoration: underline;
+}
+
+.titulo-rodape {
+    margin: 140px 90px 20px 90px;
+    display: flex;
+    align-items: center;
+}
+
+.titulo-rodape a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.caixa {
+    padding: 15px 17px 15px 17px;
+    border: solid 3px #fff;
+    background-color: #000;
+    color: #fff;
+    font-family: 'akzidenzgrotesk';
+    font-size: 15px;
+    width: 300px;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+}
+
+.botao {
+    padding: 15px 17px 15px 17px;
+    background-color: #fff;
+    border: solid 3px #fff;
+    color: #000;
+    font-family: 'bertholdakzidenzgroteskbeextended';
+    font-size: 15px;
+}
+}
